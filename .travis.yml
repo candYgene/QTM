@@ -13,6 +13,8 @@ env:
     - QTM_BIN=./QTM
     - INFILE=articles.txt
     - OUTFILE=qtl.csv
+before_install:
+  - cp data/*.xml .
 install:
   - mvn clean install
   - solr/install.sh
